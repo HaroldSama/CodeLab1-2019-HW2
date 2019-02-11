@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
 	
 	private Rigidbody2D rb;
 
-	public int score = 0;
+	public int score;
 	public Text ScoreText;
 	
 	// Use this for initialization
@@ -58,6 +58,16 @@ public class PlayerController : MonoBehaviour
 		}
 		
 		rb.AddForce(newForce);
+		
+		if (name == "Player1")
+		{
+			score = PrizeScript.Score1;
+		}
+
+		if (name == "Player2")
+		{
+			score = PrizeScript.Score2;
+		}
 		
 		ScoreText.text =  "" + score;
 		

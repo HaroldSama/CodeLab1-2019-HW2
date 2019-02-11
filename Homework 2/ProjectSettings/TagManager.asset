@@ -6,6 +6,9 @@ TagManager:
   tags:
   - GameManager
   - Ball
+  - Player2
+  - Wall
+  - Prize
   layers:
   - Default
   - TransparentFX
