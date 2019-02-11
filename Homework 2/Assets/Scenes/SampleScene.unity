@@ -1433,11 +1433,14 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1382992747}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 89b40cc79a82c0046b2ee343f2fc928c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpawnPosList: []
+  PossibleSpawnPos: {x: 0, y: 0}
+  ActualSpawnPos: {x: 0, y: 0}
 --- !u!4 &1382992749
 Transform:
   m_ObjectHideFlags: 0

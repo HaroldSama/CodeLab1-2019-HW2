@@ -2,10 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PrizeScript : MonoBehaviour {
+public class PrizeScript : MonoBehaviour
+{
+
+	public Vector2 Pos;
+	public GameObject Spawner;
 
 	// Use this for initialization
 	void Start () {
+		
+		Spawner = GameObject.FindGameObjectWithTag("GameManager");
 		
 	}
 	
@@ -24,5 +30,6 @@ public class PrizeScript : MonoBehaviour {
 		}
 		
 		Destroy(gameObject);
+		Spawner.GetComponent<Spawner>().SpawnPosList.Add(Pos);//put the position of this prize back to the list
 	}
 }
