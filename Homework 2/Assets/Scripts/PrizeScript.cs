@@ -24,9 +24,9 @@ public class PrizeScript : MonoBehaviour
 	{
 		print("I GOT HIT");
 
-		if (other.CompareTag("Player"))
+		if (other.CompareTag("Ball"))
 		{
-			other.GetComponent<PlayerController>().score++;
+			//other.GetComponent<PlayerController>().score++;
 		}
 		
 		Destroy(gameObject);

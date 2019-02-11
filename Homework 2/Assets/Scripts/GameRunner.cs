@@ -12,6 +12,9 @@ public class GameRunner : MonoBehaviour
 	public GameObject Player1;
 	public GameObject Player2;
 	public GameObject Timer;
+	public GameObject Ball;
+	private Rigidbody2D rb;
+	private Vector2 newForce;
 	public Text StartText;
 	public Text EndText;
 	public Text WinnerText;
@@ -24,6 +27,10 @@ public class GameRunner : MonoBehaviour
 	// Use this for initialization
 	void Start () {
 		
+		rb = Ball.GetComponent<Rigidbody2D>();		
+		newForce = new Vector2((Random.Range(0 , 2) - 0.5f) * 1000, 0);
+		print(newForce);
+
 	}
 	
 	// Update is called once per frame
@@ -40,6 +47,7 @@ public class GameRunner : MonoBehaviour
 			gameObject.GetComponent<Spawner>().enabled = true; //Enable prizes to spawn
 			Timer.GetComponent<Timer>().enabled = true; //Start the timer
 			Destroy(StartText); //Hide the Start text
+			rb.AddForce(newForce);//Serve the Ball
 		}
 
 		if (GameEnds == false && GameRunning && Timer.GetComponent<Timer>().counting == false) //When time's up
